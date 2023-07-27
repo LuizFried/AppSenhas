@@ -32,10 +32,12 @@ def gerarsenha(tam='', cara='', email=''):
 
 
     lista = cara.strip()
+
     if lista == '' or ' ':
         lista = 'N'
 
     mail = email.strip()
+
     if mail == "":
         messagebox.showwarning('Falha ao enviar', 'Email não reconhecido, digite um válido')
 
@@ -52,10 +54,31 @@ def gerarsenha(tam='', cara='', email=''):
             for i in range(0, contador):
                 carc = randint(0, len(lista_simples))
                 x += lista_simples[carc-1]
+
+                outlook = win32.Dispatch('outlook.application')
+
+            # criar um email
+            email = outlook.CreateItem(0)
+
+
+            email.To = mail
+            email.Subject = "Gerador de Senhas"
+            email.HTMLBody = f"""
+            <p>Olá, sua senha é: {x}</p>
+
+
+            <p>Abs,</p>
+            <p>L.Felipe</p>
+            """
+
+
+            email.Send()
+            resp.configure(text="Senha enviada")
+            return
+
         except:
             resp.configure(text='Algo deu errado tente novamente')
-        else:
-            resp.configure(text=x)
+
 
 
     if lista[0] == 'Ss':
@@ -71,10 +94,31 @@ def gerarsenha(tam='', cara='', email=''):
                 carc = randint(0, len(lista_composta))
                 x += lista_composta[carc-1]
 
+                outlook = win32.Dispatch('outlook.application')
+
+
+            email = outlook.CreateItem(0)
+
+
+            email.To = mail
+            email.Subject = "Gerador de Senhas"
+            email.HTMLBody = f"""
+            <p>Olá, sua senha é: {x}</p>
+
+
+            <p>Abs,</p>
+            <p>L.Felipe</p>
+            """
+
+
+            email.Send()
+
+            resp.configure(text="Senha enviada")
+            return
+
         except:
             resp.configure(text='Algo deu errado tente novamente')
-        else:
-            resp.configure(text=x)
+
     x = ''
 
 
