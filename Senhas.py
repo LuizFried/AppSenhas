@@ -57,7 +57,7 @@ def gerarsenha(tam='', cara='', email=''):
 
                 outlook = win32.Dispatch('outlook.application')
 
-            # criar um email
+            
             email = outlook.CreateItem(0)
 
 
@@ -107,7 +107,7 @@ def gerarsenha(tam='', cara='', email=''):
 
 
             <p>Abs,</p>
-            <p>L.Felipe</p>
+            <p>Gerador de Senhas</p>
             """
 
 
