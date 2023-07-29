@@ -7,8 +7,8 @@ import win32com.client as win32
 
 janela = Tk.Tk()
 janela.title('Gerador de senhas')
-janela.configure(background='#bce6fe')
-janela.geometry('550x250')
+janela.configure(background='#000021')
+janela.geometry('550x200')
 janela.iconbitmap('cadeado.ico')
 x = ''
 
@@ -123,37 +123,37 @@ def gerarsenha(tam='', cara='', email=''):
 
 
 texto1 = ctk.CTkLabel(janela, text='Total de caractéres: ',font=('Bodoni', 12, 'bold'),text_color='white',
-                      fg_color='black', bg_color='#bce6fe',corner_radius=1000, anchor='center', width=100)
+                      fg_color='#2065b5', bg_color='#000021',corner_radius=1000, anchor='center', width=100)
 texto1.grid(row=0, column=0, columnspan=1, padx=7, pady=12,sticky='nwse')
 
-etexto1 = ctk.CTkEntry(janela, corner_radius=100, bg_color='#bce6fe',width=50)
+etexto1 = ctk.CTkEntry(janela, corner_radius=100, bg_color='#000021',width=50)
 etexto1.grid(row=0, column=1, columnspan=1, padx=7, pady=12)
 
 
 texto2 = ctk.CTkLabel(janela, text='Contém caractéres especiais? ',font=('Bodoni', 12, 'bold'),text_color='white',
-                      fg_color='black', bg_color='#bce6fe',corner_radius=1000, anchor='center')
+                      fg_color='#2065b5', bg_color='#000021',corner_radius=1000, anchor='center')
 texto2.grid(row=0, column=2, columnspan=1, padx=7, pady=12)
 
-etexto2 = ctk.CTkEntry(janela, corner_radius=100, bg_color='#bce6fe',width=50)
+etexto2 = ctk.CTkEntry(janela, corner_radius=100, bg_color='#000021',width=50)
 etexto2.grid(row=0, column=4, columnspan=1, padx=7, pady=12)
 
 
-email = ctk.CTkLabel(janela, text='Email: ', font=('Bodoni', 12, 'bold'),text_color='white',
-                      fg_color='black', bg_color='#bce6fe',corner_radius=1000, anchor='center')
+email = ctk.CTkLabel(janela, text='Email: ', font=('Bodoni', 12, 'bold'),text_color='white',fg_color='#2065b5',
+                     bg_color='#000021',corner_radius=1000, anchor='center')
 email.grid(row=2, column=0, columnspan=1, padx=12, pady=12, sticky='nwse')
 
-eemail = ctk.CTkEntry(janela, corner_radius=100, bg_color='#bce6fe',width=300)
+eemail = ctk.CTkEntry(janela, corner_radius=100, bg_color='#000021', width=300,font=('arial', 15, 'bold'))
 eemail.grid(row=2, column=1, columnspan=2, padx=12, pady=12)
 
 
-button = ctk.CTkButton(janela, text='Gerar e enviar', bg_color='#bce6fe', fg_color='red', hover_color='green',
-                       command=lambda: gerarsenha(etexto1.get(), etexto2.get(), eemail.get()))
+button = ctk.CTkButton(janela, text='Gerar e enviar', bg_color='#000021', fg_color='#566ffb', hover_color='green',
+                       command=lambda: gerarsenha(etexto1.get(), etexto2.get(), eemail.get()),corner_radius=150)
 button.grid(row=3, column=0, columnspan=1, padx=1, pady=12)
 
 
 resp = ctk.CTkLabel(janela, text='', font=('Bodoni', 12, 'bold'),text_color='white',
-                      fg_color='black', bg_color='#bce6fe',corner_radius=1000, anchor='center')
-resp.grid(row=3, column=2, columnspan=2, padx=12, pady=12)
+                      fg_color='#2065b5', bg_color='#000021',corner_radius=1000, anchor='center')
+resp.grid(row=3, column=2, columnspan=2, padx=12, pady=12, sticky='nswe')
 
 
 janela.mainloop()
