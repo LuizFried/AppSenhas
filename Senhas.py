@@ -68,7 +68,7 @@ def gerarsenha(tam='', cara='', email=''):
 
 
             <p>Abs,</p>
-            <p>L.Felipe</p>
+            <p>Gerador de senhas</p>
             """
 
 
@@ -114,13 +114,16 @@ def gerarsenha(tam='', cara='', email=''):
             email.Send()
 
             resp.configure(text="Senha enviada")
+            x = ' '
             return
 
         except:
             resp.configure(text='Algo deu errado tente novamente')
+            x = ' '
 
-    x = ''
 
+
+# ----------------------------------------------------------------
 
 texto1 = ctk.CTkLabel(janela, text='Total de caractéres: ',font=('Bodoni', 12, 'bold'),text_color='white',
                       fg_color='#2065b5', bg_color='#000021',corner_radius=1000, anchor='center', width=100)
