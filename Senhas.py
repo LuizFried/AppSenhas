@@ -114,12 +114,12 @@ def gerarsenha(tam='', cara='', email=''):
             email.Send()
 
             resp.configure(text="Senha enviada")
-            x = ' '
+            x = ''
             return
 
         except:
             resp.configure(text='Algo deu errado tente novamente')
-            x = ' '
+            x = ''
 
 
 
