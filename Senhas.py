@@ -125,7 +125,7 @@ def gerarsenha(tam='', cara='', email=''):
 
 # ----------------------------------------------------------------
 
-texto1 = ctk.CTkLabel(janela, text='Total de caractéres: ',font=('Bodoni', 12, 'bold'),text_color='white',
+texto1 = ctk.CTkLabel(janela, text='Total de caracteres: ',font=('Bodoni', 12, 'bold'),text_color='white',
                       fg_color='#2065b5', bg_color='#000021',corner_radius=1000, anchor='center', width=100)
 texto1.grid(row=0, column=0, columnspan=1, padx=7, pady=12,sticky='nwse')
 
@@ -133,7 +133,7 @@ etexto1 = ctk.CTkEntry(janela, corner_radius=100, bg_color='#000021',width=50)
 etexto1.grid(row=0, column=1, columnspan=1, padx=7, pady=12)
 
 
-texto2 = ctk.CTkLabel(janela, text='Contém caractéres especiais? ',font=('Bodoni', 12, 'bold'),text_color='white',
+texto2 = ctk.CTkLabel(janela, text='Contém caracter especial ? ',font=('Bodoni', 12, 'bold'),text_color='white',
                       fg_color='#2065b5', bg_color='#000021',corner_radius=1000, anchor='center')
 texto2.grid(row=0, column=2, columnspan=1, padx=7, pady=12)
 
